@@ -45,10 +45,10 @@
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardManager.cs" />
      <Compile Include="Assets\_Scripts\SaveSystem\FileFormat.cs" />
      <Compile Include="Assets\_Scripts\SaveSystem\FileSave.cs" />
+     <Compile Include="Assets\_Scripts\timeCycle.cs" />
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\Leaderboard help.txt" />
-     <None Include="Assets\_Textures\_Matirials\Skys\Hdri setup.txt" />
-     <None Include="Assets\Hand Painted Seamless Wood Texture\Documentation\Documentation.txt" />
+     <None Include="Assets\_Textures\_Materials\Skys\Hdri setup.txt" />
     <Reference Include="UnityEngine">
         <HintPath>G:/Unity Editors/2020.1.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -675,6 +675,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="SteamVR_Actions.csproj">
+      <Project>{1549060a-ed66-d43a-6902-cc32e1cd18e3}</Project>
+      <Name>SteamVR_Actions</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="SteamVR_Input_Editor.csproj">
       <Project>{758ac4ea-d665-127c-2f60-bf2540361f5e}</Project>
       <Name>SteamVR_Input_Editor</Name>
@@ -693,11 +698,6 @@
     <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
       <Project>{222d719d-2477-ff70-7cec-aba2f01a0ea8}</Project>
       <Name>SteamVR_Windows_EditorHelper</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="SteamVR_Actions.csproj">
-      <Project>{1549060a-ed66-d43a-6902-cc32e1cd18e3}</Project>
-      <Name>SteamVR_Actions</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
