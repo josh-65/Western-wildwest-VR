@@ -41,11 +41,12 @@
      <Compile Include="Assets\_Scripts\SaveSystem\EasySave.cs" />
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardDisplay.cs" />
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardDisplayEditor.cs" />
+     <Compile Include="Assets\_Scripts\timeCycle.cs" />
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardData.cs" />
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardManager.cs" />
      <Compile Include="Assets\_Scripts\SaveSystem\FileFormat.cs" />
      <Compile Include="Assets\_Scripts\SaveSystem\FileSave.cs" />
-     <Compile Include="Assets\_Scripts\timeCycle.cs" />
+     <Compile Include="Assets\_Scripts\TerrainToolkit.cs" />
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\Leaderboard help.txt" />
      <None Include="Assets\_Textures\_Materials\Skys\Hdri setup.txt" />
