@@ -7,7 +7,7 @@ public class levelChange : MonoBehaviour
 {
     public Animator transition;
     public float Time = 0f;
-    public string transname;
+    public string trigger;
 
     void Update() {
         Scene S = SceneManager.GetActiveScene();
@@ -31,7 +31,7 @@ public class levelChange : MonoBehaviour
     }
 
     IEnumerator loadLevel(int levelIndex) {
-        transition.SetTrigger(transname);
+        transition.SetTrigger(trigger);
         yield return new WaitForSeconds(Time);
         SceneManager.LoadScene(levelIndex);
     }

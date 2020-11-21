@@ -37,6 +37,8 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\SaveSystem\WebSave.cs" />
+     <Compile Include="Assets\_Scripts\settings.cs" />
+     <Compile Include="Assets\_Scripts\buttonFX.cs" />
      <Compile Include="Assets\_Scripts\SaveSystem\Cryptography.cs" />
      <Compile Include="Assets\_Scripts\SaveSystem\EasySave.cs" />
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardDisplay.cs" />
@@ -46,13 +48,11 @@
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardData.cs" />
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardManager.cs" />
      <Compile Include="Assets\_Scripts\SaveSystem\FileFormat.cs" />
-     <Compile Include="Assets\_Scripts\SaveSystem\FileSave.cs" />
-     <Compile Include="Assets\_Scripts\settings.cs" />
-     <Compile Include="Assets\_Scripts\buttonFX.cs" />
-     <Compile Include="Assets\_Scripts\settingsToggle.cs" />
      <Compile Include="Assets\_Scripts\levelChange.cs" />
+     <Compile Include="Assets\_Scripts\SaveSystem\FileSave.cs" />
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\Leaderboard help.txt" />
+     <None Include="Assets\Hovl Studio\Procedural fire\Shaders\FireSphere.shader" />
      <None Include="Assets\_Textures\_Materials\Skys\Hdri setup.txt" />
     <Reference Include="UnityEngine">
         <HintPath>G:/Unity Editors/2020.1.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

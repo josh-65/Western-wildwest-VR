@@ -9,39 +9,17 @@ using SaveSystem;
 public class settings : MonoBehaviour {
     
     public AudioMixer mixer;
-    public Dropdown resDropdown;
-    Resolution[] ress;
+    private Canvas CanvasObject; 
+    private Canvas CanvasObject1;
+    private Canvas CanvasObject2;
 
-    void Start() {
-        //Gets and Displays resolutions
-        ress = Screen.resolutions;
-        resDropdown.ClearOptions();
-        List<string> allowRes = new List<string>();
-
-        int currentResIndex = 0;
-        for (int i = 0; i < ress.Length; i++) {
-            string option = ress[i].width+"x"+ress[i].height;
-            allowRes.Add(option);
-
-            if (ress[i].width == Screen.currentResolution.width && ress[i].height == Screen.currentResolution.height) {
-                currentResIndex = i;
-            }
-        }
-        
-        resDropdown.AddOptions(allowRes);
-        resDropdown.value = currentResIndex;
-        resDropdown.RefreshShownValue();
-    }
-
-    //General--------------------------------
-    public void fullscreen(bool isFull) {
-        Screen.fullScreen = isFull;
-    }
-    
-    //Sets resolution
-    public void setRes(int currentResIndex) {
-        Resolution res = ress[currentResIndex];
-        Screen.SetResolution(res.width, res.height, Screen.fullScreen);
+    public void Start() {
+        CanvasObject = GameObject.Find("Main").GetComponent<Canvas>();
+        CanvasObject1 = GameObject.Find("Settings").GetComponent<Canvas>();
+        CanvasObject1 = GameObject.Find("Character select").GetComponent<Canvas>();
+        CanvasObject.GetComponent<Canvas>().enabled = true;
+        CanvasObject1.GetComponent<Canvas>().enabled = false;
+        CanvasObject1.GetComponent<Canvas>().enabled = false;
     }
 
     //Sets graphics
@@ -50,11 +28,30 @@ public class settings : MonoBehaviour {
     }
 
     //Sets volume
-    public void SetMusic(float Music) {
-        mixer.SetFloat("Music", Music);
+    public void SetMaster(float master) {
+        mixer.SetFloat("master", master);
     }
-    
-    public void SetSFX(float SFX) {
-        mixer.SetFloat("SFX", SFX);
+    public void SetMusic(float music) {
+        mixer.SetFloat("music", music);
+    }
+    public void SetSFX(float sfx) {
+        mixer.SetFloat("sfx", sfx);
+    }
+    public void SetDialog(float dialog) {
+        mixer.SetFloat("dialog", dialog);
+    }
+    public void SetVoiceChat(float voiceChat) {
+        mixer.SetFloat("voiceChat", voiceChat);
+    }
+ 
+    public void toggleCanvas()
+    {
+        if (CanvasObject.enabled == true) {
+            CanvasObject.GetComponent<Canvas> ().enabled = false;
+            CanvasObject1.GetComponent<Canvas> ().enabled = true;
+        } else {
+            CanvasObject.GetComponent<Canvas> ().enabled = true;
+            CanvasObject1.GetComponent<Canvas> ().enabled = false;
+        }
     }
 }
