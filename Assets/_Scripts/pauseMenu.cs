@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Valve.VR;
 
 public class pauseMenu : MonoBehaviour
 {
@@ -11,10 +12,16 @@ public class pauseMenu : MonoBehaviour
     public float smoothTime = 0.3F;
     private Vector3 velocity = Vector3.zero;
     private Transform target;
-    private Canvas CanvasObject; 
+
+    private Canvas main;
+    private Canvas inv;
+    public GameObject PauseMenu;
+    
     void Awake()
     {
         target = Camera2Follow.transform;
+        
+        PauseMenu.SetActive(false);
     }
 
     void Update()
@@ -31,14 +38,14 @@ public class pauseMenu : MonoBehaviour
         // version 2 : my object's rotation isn't finished synchronously with the position smooth.damp ->
         transform.rotation = Quaternion.RotateTowards(transform.rotation, target.rotation, 35 * Time.deltaTime);
 
-        if (Input.GetKeyDown("esc")) {
-            CanvasObject = GameObject.Find("Pause menu").GetComponent<Canvas>();
-            if (CanvasObject.enabled == true) {
-                CanvasObject.GetComponent<Canvas> ().enabled = false;
+        // Open/Close pause menu
+        //if (SteamVR_Actions._default.Pause) {
+            if (PauseMenu.active) {
+                PauseMenu.SetActive(false);
             }else {
-            CanvasObject.GetComponent<Canvas> ().enabled = true;
+                PauseMenu.SetActive(true);
             }
-        }
+        //}
     }
 
     public void quit()

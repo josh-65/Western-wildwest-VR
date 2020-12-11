@@ -25,14 +25,6 @@ namespace Valve.VR
             }
         }
         
-        public virtual SteamVR_Action_Boolean Teleport
-        {
-            get
-            {
-                return SteamVR_Actions.default_Teleport;
-            }
-        }
-        
         public virtual SteamVR_Action_Boolean GrabPinch
         {
             get
@@ -49,14 +41,6 @@ namespace Valve.VR
             }
         }
         
-        public virtual SteamVR_Action_Pose Pose
-        {
-            get
-            {
-                return SteamVR_Actions.default_Pose;
-            }
-        }
-        
         public virtual SteamVR_Action_Skeleton SkeletonLeftHand
         {
             get
@@ -70,14 +54,6 @@ namespace Valve.VR
             get
             {
                 return SteamVR_Actions.default_SkeletonRightHand;
-            }
-        }
-        
-        public virtual SteamVR_Action_Single Squeeze
-        {
-            get
-            {
-                return SteamVR_Actions.default_Squeeze;
             }
         }
         
@@ -102,6 +78,30 @@ namespace Valve.VR
             get
             {
                 return SteamVR_Actions.default_SnapTurnRight;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean Pause
+        {
+            get
+            {
+                return SteamVR_Actions.default_Pause;
+            }
+        }
+        
+        public virtual SteamVR_Action_Vector2 Walk
+        {
+            get
+            {
+                return SteamVR_Actions.default_Walk;
+            }
+        }
+        
+        public virtual SteamVR_Action_Pose Pose
+        {
+            get
+            {
+                return SteamVR_Actions.default_Pose;
             }
         }
         

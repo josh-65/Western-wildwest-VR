@@ -9,16 +9,7 @@
     },
     "/actions/default": {
       "chords": [],
-      "poses": [
-        {
-          "output": "/actions/default/in/pose",
-          "path": "/user/hand/left/pose/raw"
-        },
-        {
-          "output": "/actions/default/in/pose",
-          "path": "/user/hand/right/pose/raw"
-        }
-      ],
+      "poses": [],
       "haptics": [
         {
           "output": "/actions/default/out/haptic",
@@ -41,80 +32,12 @@
           }
         },
         {
-          "path": "/user/hand/left/input/grip",
-          "mode": "force_sensor",
-          "parameters": {},
-          "inputs": {
-            "force": {
-              "output": "/actions/default/in/squeeze"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/right/input/grip",
-          "mode": "force_sensor",
-          "parameters": {},
-          "inputs": {
-            "force": {
-              "output": "/actions/default/in/squeeze"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/left/input/trackpad",
-          "mode": "button",
-          "parameters": {},
-          "inputs": {
-            "click": {
-              "output": "/actions/default/in/teleport"
-            }
-          }
-        },
-        {
           "path": "/user/hand/right/input/trigger",
           "mode": "button",
           "parameters": {},
           "inputs": {
             "click": {
               "output": "/actions/default/in/interactui"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/right/input/trackpad",
-          "mode": "button",
-          "parameters": {},
-          "inputs": {
-            "click": {
-              "output": "/actions/default/in/teleport"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/left/input/thumbstick",
-          "mode": "dpad",
-          "parameters": {
-            "deadzone_pct": "25",
-            "overlap_pct": "30",
-            "sub_mode": "touch"
-          },
-          "inputs": {
-            "north": {
-              "output": "/actions/default/in/teleport"
-            }
-          }
-        },
-        {
-          "path": "/user/hand/right/input/thumbstick",
-          "mode": "dpad",
-          "parameters": {
-            "deadzone_pct": "25",
-            "overlap_pct": "30",
-            "sub_mode": "touch"
-          },
-          "inputs": {
-            "north": {
-              "output": "/actions/default/in/teleport"
             }
           }
         },
@@ -205,16 +128,7 @@
           }
         }
       ],
-      "skeleton": [
-        {
-          "output": "/actions/default/in/skeletonlefthand",
-          "path": "/user/hand/left/input/skeleton/left"
-        },
-        {
-          "output": "/actions/default/in/skeletonrighthand",
-          "path": "/user/hand/right/input/skeleton/right"
-        }
-      ]
+      "skeleton": []
     },
     "/actions/platformer": {
       "chords": [],

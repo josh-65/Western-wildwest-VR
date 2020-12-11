@@ -16,7 +16,7 @@ public class levelChange : MonoBehaviour
 
             IEnumerator reset() {
                 yield return new WaitForSeconds(78);
-                SceneManager.LoadScene("M - Main");
+                SceneManager.LoadScene(1);
             }
         }
     }
@@ -26,8 +26,12 @@ public class levelChange : MonoBehaviour
         Debug.Log("quit");
     }
 
-    public void loadNextLevel() {
-        StartCoroutine(loadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    public void loadGame() {
+        StartCoroutine(loadLevel(2));
+    }
+
+    public void loadCredits() {
+        StartCoroutine(loadLevel(0));
     }
 
     IEnumerator loadLevel(int levelIndex) {

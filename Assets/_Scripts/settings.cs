@@ -9,18 +9,6 @@ using SaveSystem;
 public class settings : MonoBehaviour {
     
     public AudioMixer mixer;
-    private Canvas CanvasObject; 
-    private Canvas CanvasObject1;
-    private Canvas CanvasObject2;
-
-    public void Start() {
-        CanvasObject = GameObject.Find("Main").GetComponent<Canvas>();
-        CanvasObject1 = GameObject.Find("Settings").GetComponent<Canvas>();
-        CanvasObject1 = GameObject.Find("Character select").GetComponent<Canvas>();
-        CanvasObject.GetComponent<Canvas>().enabled = true;
-        CanvasObject1.GetComponent<Canvas>().enabled = false;
-        CanvasObject1.GetComponent<Canvas>().enabled = false;
-    }
 
     //Sets graphics
     public void quality (int index) {
@@ -42,16 +30,5 @@ public class settings : MonoBehaviour {
     }
     public void SetVoiceChat(float voiceChat) {
         mixer.SetFloat("voiceChat", voiceChat);
-    }
- 
-    public void toggleCanvas()
-    {
-        if (CanvasObject.enabled == true) {
-            CanvasObject.GetComponent<Canvas> ().enabled = false;
-            CanvasObject1.GetComponent<Canvas> ().enabled = true;
-        } else {
-            CanvasObject.GetComponent<Canvas> ().enabled = true;
-            CanvasObject1.GetComponent<Canvas> ().enabled = false;
-        }
     }
 }
