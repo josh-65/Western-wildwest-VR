@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6241674, g: 0.4328707, b: 0.4161113, a: 1}
+  m_IndirectSpecularColor: {r: 0.62435216, g: 0.43284684, b: 0.4187711, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3587,7 +3587,7 @@ MonoBehaviour:
   Camera2Follow: {fileID: 794615191}
   CameraDistance: 3
   smoothTime: 0.3
-  PauseMenu: {fileID: 0}
+  PauseMenu: {fileID: 1868023998}
 --- !u!1 &1875498355
 GameObject:
   m_ObjectHideFlags: 0

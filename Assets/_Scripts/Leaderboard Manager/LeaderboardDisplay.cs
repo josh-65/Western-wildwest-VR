@@ -11,8 +11,8 @@ using UnityEngine.UI;
  *			                        Script written by: 
  *			           Jonathan Carter (https://jonathan.carter.games)
  *			        
- *									Version: 1.0.2
- *						   Last Updated: 07/10/2020 (d/m/y)					
+ *									Version: 1.0.3
+ *						   Last Updated: 09/12/2020 (d/m/y)					
  * 
 *************************************************************************************/
 

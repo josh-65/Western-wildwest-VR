@@ -276,7 +276,7 @@ MonoBehaviour:
   headsetOnHead:
     actionPath: /actions/default/in/HeadsetOnHead
     needsReinit: 0
-  allowToggleTo2D: 1
+  allowToggleTo2D: 0
 --- !u!1 &109154
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 2014920}
   - component: {fileID: 11450526}
   - component: {fileID: 12440092}
-  - component: {fileID: 5679502922485182970}
+  - component: {fileID: 6330360357675556726}
   m_Layer: 8
   m_Name: VRCamera
   m_TagString: MainCamera
@@ -595,7 +595,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 12
+  m_FocalLength: 17.137775
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -603,8 +603,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.05
-  far clip plane: 500
-  field of view: 90
+  far clip plane: 1000
+  field of view: 70
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -629,7 +629,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125964}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ad1e469d4e3e04489f9a36419f1a4f8, type: 3}
   m_Name: 
@@ -642,7 +642,7 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125964}
   m_Enabled: 1
---- !u!114 &5679502922485182970
+--- !u!114 &6330360357675556726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -983,6 +983,7 @@ GameObject:
   - component: {fileID: 11450312}
   - component: {fileID: 114000011273627542}
   - component: {fileID: 114000011734077242}
+  - component: {fileID: 7867403963303612977}
   m_Layer: 8
   m_Name: LeftHand
   m_TagString: Untagged
@@ -1052,13 +1053,13 @@ MonoBehaviour:
   noSteamVRFallbackCamera: {fileID: 0}
   noSteamVRFallbackMaxDistanceNoItem: 10
   noSteamVRFallbackMaxDistanceWithItem: 0.5
-  renderModelPrefab: {fileID: 1000010184414672, guid: 5dc81ef5cae96304586abbc6e4b5beb8, type: 3}
+  renderModelPrefab: {fileID: 1000011547835092, guid: d5082f7d9f947374197e0a97786f4e40, type: 3}
   renderModels: []
   mainRenderModel: {fileID: 0}
   hoverhighlightRenderModel: {fileID: 0}
-  showDebugText: 0
+  showDebugText: 1
   spewDebugText: 0
-  showDebugInteractables: 0
+  showDebugInteractables: 1
 --- !u!114 &114000011273627542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,6 +1111,30 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967039
   hand: {fileID: 0}
+--- !u!114 &7867403963303612977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2f511c1adaa1e94ebe7ca97bbcabd17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pose: {fileID: 0}
+  interactWithUI:
+    actionPath: /actions/default/in/InteractUI
+    needsReinit: 0
+  active: 1
+  color: {r: 0, g: 0, b: 0, a: 0}
+  thickness: 0.002
+  clickColor: {r: 0, g: 1, b: 0, a: 1}
+  holder: {fileID: 0}
+  pointer: {fileID: 0}
+  addRigidBody: 0
+  reference: {fileID: 0}
 --- !u!1 &160596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,9 +1220,9 @@ MonoBehaviour:
   renderModels: []
   mainRenderModel: {fileID: 0}
   hoverhighlightRenderModel: {fileID: 0}
-  showDebugText: 0
+  showDebugText: 1
   spewDebugText: 0
-  showDebugInteractables: 0
+  showDebugInteractables: 1
 --- !u!114 &114000011957598740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2720,7 +2745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7434e43635fb2924583f5e0f2fb6ed3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapAngle: 45
+  snapAngle: 15
   showTurnAnimation: 1
   snapTurnSource: {fileID: 82000013955136614}
   rotateSound: {fileID: 8300000, guid: 973c016de5a1cf34ebb6b3477ca2da5c, type: 3}
@@ -2732,7 +2757,7 @@ MonoBehaviour:
   snapRightAction:
     actionPath: /actions/default/in/SnapTurnRight
     needsReinit: 0
-  fadeScreen: 1
+  fadeScreen: 0
   fadeTime: 0.1
   screenFadeColor: {r: 0, g: 0, b: 0, a: 1}
   distanceFromFace: 1.3

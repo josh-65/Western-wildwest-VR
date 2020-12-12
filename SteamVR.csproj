@@ -453,6 +453,9 @@
     <Reference Include="ICSharpCode.NRefactory">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/PackageCache/com.unity.render-pipelines.core@8.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/PackageCache/com.unity.burst@1.2.0-preview.12/Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="mscorlib">
         <HintPath>G:/Unity Editors/2020.1.16f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
     </Reference>

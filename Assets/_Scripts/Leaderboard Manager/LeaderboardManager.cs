@@ -14,8 +14,9 @@ using System.Linq;
  *			                        Script written by: 
  *			           Jonathan Carter (https://jonathan.carter.games)
  *			        
- *									Version: 1.0.2
- *						   Last Updated: 07/10/2020 (d/m/y)					
+ *			        
+ *									Version: 1.0.3
+ *						   Last Updated: 09/12/2020 (d/m/y)					
  * 
 *************************************************************************************/
 
@@ -261,6 +262,75 @@ namespace CarterGames.Assets.LeaderboardManager
                     Stream.Close();
                 }
             }
-        }    
+        }
+
+
+        /// <summary>
+        /// Gets the position of an entry in the leaderboard. 
+        /// </summary>
+        /// <param name="_score">The score they got to match to.</param>
+        /// <param name="option">The ordering you wish to search by.</param>
+        /// <returns>Int | The position the values match up to.</returns>
+        public static int GetPosition(int _score, LeaderboardDisplay.DisplayOptions option)
+        {
+            LeaderboardData[] _data;
+            int _matchingScore = 0;
+            int _endingPos = 0;
+
+
+            switch (option)
+            {
+                case LeaderboardDisplay.DisplayOptions.Unordered:
+                    _data = LoadLeaderboardData();
+                    break;
+                case LeaderboardDisplay.DisplayOptions.Descending:
+                    _data = LoadLeaderboardDataDescending();
+                    break;
+                case LeaderboardDisplay.DisplayOptions.Ascending:
+                    _data = LoadLeaderboardDataAscending();
+                    break;
+                default:
+                    _data = new LeaderboardData[0];
+                    break;
+            }
+
+
+            // checks to see if there is only 1 entry with the entered score.
+            for (int i = 0; i < _data.Length; i++)
+            {
+                if (_data[i].playerScore.Equals(_score))
+                {
+                    _matchingScore++;
+                }
+            }
+
+            // if only 1 entry it will find the entry and return the position, else it will find the lowest entry with that score and return it (as when you tie with people you both have the lower position value).
+            if (_matchingScore.Equals(1))
+            {
+                for (int i = 0; i < _data.Length; i++)
+                {
+                    if (_data[i].playerScore.Equals(_score))
+                    {
+                        return i + 1;
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < _data.Length; i++)
+                {
+                    if (_data[i].playerScore.Equals(_score))
+                    {
+                        _endingPos = i;
+                    }
+                }
+
+                return (_endingPos + 1);
+            }
+
+
+            // shouldn't happen.... but needs to have a default value if it doesn't work xD.
+            return 0;
+        }
     }
 }

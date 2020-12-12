@@ -11,8 +11,8 @@ using UnityEditor;
  *			                        Script written by: 
  *			           Jonathan Carter (https://jonathan.carter.games)
  *			        
- *									Version: 1.0.2
- *						   Last Updated: 07/10/2020 (d/m/y)					
+ *									Version: 1.0.3
+ *						   Last Updated: 09/12/2020 (d/m/y)						
  * 
 *************************************************************************************/
 
@@ -72,7 +72,7 @@ namespace CarterGames.Assets.LeaderboardManager
 
             EditorGUILayout.BeginHorizontal();
             GUILayout.FlexibleSpace();
-            EditorGUILayout.LabelField("Version: 1.0.2", GUILayout.Width(87.5f));
+            EditorGUILayout.LabelField("Version: 1.0.3", GUILayout.Width(87.5f));
             GUILayout.FlexibleSpace();
             EditorGUILayout.EndHorizontal();
 
@@ -85,7 +85,7 @@ namespace CarterGames.Assets.LeaderboardManager
             GUILayout.FlexibleSpace();
             if (GUILayout.Button("Documentation", GUILayout.Width(110f)))
             {
-                Application.OpenURL("https://carter.games/leaderboardmanager.html");
+                Application.OpenURL("https://carter.games/leaderboardmanager");
             }
             GUI.color = Color.cyan;
             if (GUILayout.Button("Discord", GUILayout.Width(65f)))
