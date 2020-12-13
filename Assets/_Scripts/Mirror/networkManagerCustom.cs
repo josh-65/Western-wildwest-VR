@@ -34,10 +34,10 @@ namespace Mirror.www.game
             }
         }*/
 
-        void Awake() 
+        void Update() 
         {
             ConfigManager.FetchConfigs<userAttributes, appAttributes>(new userAttributes(), new appAttributes());
-            networkAddress = ConfigManager.appConfig.GetString("Server - IP");
+            networkAddress = ConfigManager.appConfig.GetString("Client - IP");
             maxConnections = ConfigManager.appConfig.GetInt("Server - Max players");
         }
 

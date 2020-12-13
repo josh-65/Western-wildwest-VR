@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.6242909, g: 0.43286878, b: 0.4188798, a: 1}
+  m_IndirectSpecularColor: {r: 0.6242909, g: 0.4328645, b: 0.41888267, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9689,7 +9689,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   networkManager: {fileID: 1855448411}
-  ipAddress: theservers.ddns.net
   joinButton: {fileID: 1713405801}
 --- !u!114 &1713405806
 MonoBehaviour:
@@ -10376,7 +10375,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855448409}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -10399,12 +10398,12 @@ MonoBehaviour:
   runInBackground: 1
   autoStartServerBuild: 1
   showDebugMessages: 0
-  serverTickRate: 30
+  serverTickRate: 60
   offlineScene: Assets/_Scenes/M - Main.unity
   onlineScene: 
   transport: {fileID: 1855448412}
-  networkAddress: theserver.ddns.net
-  maxConnections: 1000
+  networkAddress: 
+  maxConnections: 0
   disconnectInactiveConnections: 1
   disconnectInactiveTimeout: 30
   authenticator: {fileID: 0}
