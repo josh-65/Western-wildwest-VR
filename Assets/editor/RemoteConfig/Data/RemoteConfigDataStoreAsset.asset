@@ -16,28 +16,40 @@ MonoBehaviour:
   - metadata:
       entityId: 285f00a5-1da9-4d6d-87f1-7b9786a967c8
     rs:
-      key: Server IP
+      key: Server - IP
       type: string
       value: 
   - metadata:
       entityId: a8989aa6-ab49-497a-a708-97d6b141c9e4
     rs:
-      key: Server Port
-      type: string
-      value: 
+      key: Server - Port
+      type: int
+      value: 25567
+  - metadata:
+      entityId: 6cd0cf66-d462-467c-87b2-5682883f99d5
+    rs:
+      key: Server - Max players
+      type: int
+      value: 50
   rsLastCachedKeyList:
   - metadata:
       entityId: 285f00a5-1da9-4d6d-87f1-7b9786a967c8
     rs:
-      key: Server IP
+      key: Server - IP
       type: string
       value: 
   - metadata:
       entityId: a8989aa6-ab49-497a-a708-97d6b141c9e4
     rs:
-      key: Server Port
-      type: string
-      value: 
+      key: Server - Port
+      type: int
+      value: 25567
+  - metadata:
+      entityId: 6cd0cf66-d462-467c-87b2-5682883f99d5
+    rs:
+      key: Server - Max players
+      type: int
+      value: 50
   configId: f034aa72-d8ba-4468-bade-62c4d986a09f
   currentEnvironmentId: 9d007e7f-eb8b-458d-aa5d-297e895ae83c
   environments:
