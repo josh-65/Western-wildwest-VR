@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  rsKeyList:
+  - metadata:
+      entityId: 285f00a5-1da9-4d6d-87f1-7b9786a967c8
+    rs:
+      key: Server IP
+      type: string
+      value: 
+  - metadata:
+      entityId: a8989aa6-ab49-497a-a708-97d6b141c9e4
+    rs:
+      key: Server Port
+      type: string
+      value: 
+  rsLastCachedKeyList:
+  - metadata:
+      entityId: 285f00a5-1da9-4d6d-87f1-7b9786a967c8
+    rs:
+      key: Server IP
+      type: string
+      value: 
+  - metadata:
+      entityId: a8989aa6-ab49-497a-a708-97d6b141c9e4
+    rs:
+      key: Server Port
+      type: string
+      value: 
+  configId: f034aa72-d8ba-4468-bade-62c4d986a09f
+  currentEnvironmentId: 9d007e7f-eb8b-458d-aa5d-297e895ae83c
+  environments:
+  - id: 124e474c-2ce3-41e0-a262-0a690d3da30a
+    appId: 
+    name: Release (Default)
+    description: 
+    createdAt: 2020-12-13T17:30:42Z
+    updatedAt: 2020-12-13T17:30:42Z
+  - id: 9d007e7f-eb8b-458d-aa5d-297e895ae83c
+    appId: 
+    name: Development
+    description: 
+    createdAt: 2020-12-13T17:30:42Z
+    updatedAt: 2020-12-13T17:30:42Z
+  rulesList: []
+  lastCachedRulesList: []
+  addedRulesIDs: []
+  updatedRulesIDs: []
+  deletedRulesIDs: []

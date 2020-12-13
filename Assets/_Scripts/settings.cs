@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
-using SaveSystem;
 
 [System.Serializable]
 public class settings : MonoBehaviour {

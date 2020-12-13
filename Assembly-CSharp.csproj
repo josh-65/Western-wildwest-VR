@@ -36,23 +36,25 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Scripts\SaveSystem\WebSave.cs" />
+     <Compile Include="Assets\_Scripts\Mirror\playerName.cs" />
      <Compile Include="Assets\_Scripts\settings.cs" />
      <Compile Include="Assets\_Scripts\buttonFX.cs" />
      <Compile Include="Assets\_Scripts\menuChange.cs" />
-     <Compile Include="Assets\_Scripts\SaveSystem\Cryptography.cs" />
-     <Compile Include="Assets\_Scripts\SaveSystem\EasySave.cs" />
+     <Compile Include="Assets\_Scripts\Mirror\networkManagerCustom.cs" />
+     <Compile Include="Assets\_Scripts\Mirror\joinServer.cs" />
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardDisplay.cs" />
-     <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardDisplayEditor.cs" />
+     <Compile Include="Assets\_Scripts\Mirror\playerSpawn.cs" />
      <Compile Include="Assets\_Scripts\TerrainToolkit.cs" />
+     <Compile Include="Assets\_Scripts\Save Manager\SaveExtraTypes.cs" />
+     <Compile Include="Assets\_Scripts\Save Manager\SaveData.cs" />
+     <Compile Include="Assets\_Scripts\Mirror\networkGamePlayer.cs" />
      <Compile Include="Assets\_Scripts\timeCycle.cs" />
      <Compile Include="Assets\_Scripts\pauseMenu.cs" />
+     <Compile Include="Assets\_Scripts\Save Manager\SaveManager.cs" />
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardData.cs" />
-     <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardManager.cs" />
-     <Compile Include="Assets\_Scripts\SaveSystem\FileFormat.cs" />
-     <Compile Include="Assets\_Scripts\levelChange.cs" />
-     <Compile Include="Assets\_Scripts\SaveSystem\FileSave.cs" />
      <Compile Include="Assets\vrMovement.cs" />
+     <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardManager.cs" />
+     <Compile Include="Assets\_Scripts\levelChange.cs" />
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\Mirror\Version.txt" />
      <None Include="Assets\Mirror\Readme.txt" />
@@ -60,6 +62,7 @@
      <None Include="Assets\Leaderboard help.txt" />
      <None Include="Assets\Mirror\Plugins\Mono.Cecil\License.txt" />
      <None Include="Assets\_Shaders\FireSphere.shader" />
+     <None Include="Assets\Save manager help.txt" />
      <None Include="Assets\_Textures\_Materials\Skys\Hdri setup.txt" />
     <Reference Include="UnityEngine">
         <HintPath>G:/Unity Editors/2020.1.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -265,11 +268,11 @@
     <Reference Include="Valve.Newtonsoft.Json">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/PackageCache/com.unity.burst@1.4.3/Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Unsafe">
-        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/PackageCache/com.unity.burst@1.2.0-preview.12/Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>G:/Unity Editors/2020.1.16f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -628,11 +631,17 @@
     <Reference Include="Unity.XR.OpenVR">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.XR.OpenVR.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.XR.OpenVR.Editor">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.XR.OpenVR.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Editor">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
@@ -642,6 +651,9 @@
     </Reference>
     <Reference Include="Unity.VisualEffectGraph.Runtime">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -667,8 +679,14 @@
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Animation.Rigging.Editor">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Animation.Rigging.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
@@ -685,6 +703,9 @@
     <Reference Include="Unity.ShaderGraph.Editor">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Mathematics.Editor">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
     </Reference>
@@ -697,23 +718,11 @@
     <Reference Include="UnityEditor.UI">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst">
-        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+    <Reference Include="Unity.RemoteConfig.Editor">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.RemoteConfig.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Burst.Editor">
-        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Animation.Rigging">
-        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics">
-        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Animation.Rigging.Editor">
-        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Animation.Rigging.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Mathematics.Editor">
-        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+    <Reference Include="Unity.RemoteConfig">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.RemoteConfig.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

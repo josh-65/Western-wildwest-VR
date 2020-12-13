@@ -289,15 +289,6 @@
     <Reference Include="UnityEditor.LinuxStandalone.Extensions">
         <HintPath>G:/Unity Editors/2020.1.16f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="Valve.Newtonsoft.Json">
-        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/PackageCache/com.unity.render-pipelines.core@8.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.CecilX">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.dll</HintPath>
     </Reference>
@@ -309,6 +300,18 @@
     </Reference>
     <Reference Include="Mono.CecilX.Rocks">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Assets/Mirror/Plugins/Mono.Cecil/Mono.CecilX.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Valve.Newtonsoft.Json">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Assets/SteamVR/Input/Plugins/JSON.NET/Valve.Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/PackageCache/com.unity.burst@1.4.3/Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/PackageCache/com.unity.render-pipelines.core@8.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>G:/Unity Editors/2020.1.16f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

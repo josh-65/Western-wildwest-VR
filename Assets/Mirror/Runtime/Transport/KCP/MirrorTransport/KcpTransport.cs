@@ -1,4 +1,3 @@
-//#if MIRROR <- commented out because MIRROR isn't defined on first import yet
 using System;
 using System.Linq;
 using System.Net;
@@ -14,7 +13,7 @@ namespace kcp2k
 
         // common
         [Header("Transport Configuration")]
-        public ushort Port = 7777;
+        public ushort Port;
         [Tooltip("NoDelay is recommended to reduce latency. This also scales better without buffers getting full.")]
         public bool NoDelay = true;
         [Tooltip("KCP internal update interval. 100ms is KCP default, but a lower interval is recommended to minimize latency and to scale to more networked entities.")]
