@@ -14,44 +14,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rsKeyList:
   - metadata:
-      entityId: c7649f58-7ab7-4172-ba30-f8d2c5587814
+      entityId: 30a6ff5b-4276-4817-8a79-f2ccde8dba18
     rs:
       key: Client - IP
       type: string
-      value: theservers.ddns.net
+      value: localhost
   - metadata:
-      entityId: 16ae8620-1395-4740-8042-5a435c85e575
+      entityId: 5dc605fa-74fb-4556-be97-08399fd50e9d
     rs:
       key: Client - Port
       type: int
-      value: 25566
+      value: 25567
   - metadata:
-      entityId: eb3f70dc-35db-47c5-af4a-2dc8efa71626
+      entityId: 8941b589-2984-42c8-b650-2e8587c1a522
     rs:
       key: Server - Max players
       type: int
-      value: 100
+      value: 5
   rsLastCachedKeyList:
   - metadata:
-      entityId: c7649f58-7ab7-4172-ba30-f8d2c5587814
+      entityId: 30a6ff5b-4276-4817-8a79-f2ccde8dba18
     rs:
       key: Client - IP
       type: string
-      value: theservers.ddns.net
+      value: localhost
   - metadata:
-      entityId: 16ae8620-1395-4740-8042-5a435c85e575
+      entityId: 5dc605fa-74fb-4556-be97-08399fd50e9d
     rs:
       key: Client - Port
       type: int
-      value: 25566
+      value: 25567
   - metadata:
-      entityId: eb3f70dc-35db-47c5-af4a-2dc8efa71626
+      entityId: 8941b589-2984-42c8-b650-2e8587c1a522
     rs:
       key: Server - Max players
       type: int
-      value: 100
-  configId: 3bf83f40-589e-4fc5-8fce-620a46ce2b18
-  currentEnvironmentId: 124e474c-2ce3-41e0-a262-0a690d3da30a
+      value: 5
+  configId: f034aa72-d8ba-4468-bade-62c4d986a09f
+  currentEnvironmentId: 9d007e7f-eb8b-458d-aa5d-297e895ae83c
   environments:
   - id: 124e474c-2ce3-41e0-a262-0a690d3da30a
     appId: 

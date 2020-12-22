@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class levelChange : MonoBehaviour
 {
-    public Animator transition;
-    public float Time = 0f;
-    public string trigger;
+    public int creditLength;
 
     void Update() {
         Scene S = SceneManager.GetActiveScene();
@@ -15,8 +13,8 @@ public class levelChange : MonoBehaviour
             StartCoroutine(reset());
 
             IEnumerator reset() {
-                yield return new WaitForSeconds(78);
-                SceneManager.LoadScene(1);
+                yield return new WaitForSeconds(creditLength);
+                SceneManager.LoadScene(0);
             }
         }
     }
@@ -26,17 +24,7 @@ public class levelChange : MonoBehaviour
         Debug.Log("quit");
     }
 
-    public void loadGame() {
-        StartCoroutine(loadLevel(2));
-    }
-
     public void loadCredits() {
-        StartCoroutine(loadLevel(0));
-    }
-
-    IEnumerator loadLevel(int levelIndex) {
-        transition.SetTrigger(trigger);
-        yield return new WaitForSeconds(Time);
-        SceneManager.LoadScene(levelIndex);
+        SceneManager.LoadScene(1);
     }
 }

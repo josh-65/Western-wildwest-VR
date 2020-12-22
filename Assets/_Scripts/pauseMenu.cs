@@ -39,13 +39,13 @@ public class pauseMenu : MonoBehaviour
         transform.rotation = Quaternion.RotateTowards(transform.rotation, target.rotation, 35 * Time.deltaTime);
 
         // Open/Close pause menu
-        //if (SteamVR_Actions._default.Pause) {
+        if (SteamVR_Actions._default.Pause[SteamVR_Input_Sources.LeftHand].stateDown) {
             if (PauseMenu.active) {
                 PauseMenu.SetActive(false);
             }else {
                 PauseMenu.SetActive(true);
             }
-        //}
+        }
     }
 
     public void quit()
