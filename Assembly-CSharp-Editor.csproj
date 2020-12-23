@@ -55,9 +55,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\RTS_Camera\Scripts\Editor\LayoutHelpers.cs" />
      <Compile Include="Assets\editor\Carter Games\Transform Colours\TransformColours.cs" />
      <Compile Include="Assets\editor\Carter Games\Leaderboard Manager\LeaderboardDisplayEditor.cs" />
      <Compile Include="Assets\editor\Carter Games\Save Manager\SaveDataEditor.cs" />
+     <Compile Include="Assets\RTS_Camera\Scripts\Editor\RTS_CameraEditor.cs" />
      <Compile Include="Assets\editor\Terrain tools\TerrainToolkitEditor.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>

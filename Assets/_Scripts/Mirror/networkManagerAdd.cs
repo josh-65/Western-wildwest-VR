@@ -4,10 +4,15 @@ using Steamworks;
 using UnityEngine;
 using Unity.RemoteConfig;
 
-public class networkManagerRemote : NetworkManager
+public class networkManagerAdd : NetworkManager
 {
     public struct userAttributes {}
     public struct appAttributes {}
+
+    public static string networkAddress;
+    public static int maxConnections;
+    public static int numPlayers;
+    public static int Port;
 
     void Update() 
     {
