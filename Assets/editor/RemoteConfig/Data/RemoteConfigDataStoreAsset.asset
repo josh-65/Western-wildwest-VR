@@ -24,7 +24,7 @@ MonoBehaviour:
     rs:
       key: Client - Port
       type: int
-      value: 25567
+      value: 7777
   - metadata:
       entityId: 8941b589-2984-42c8-b650-2e8587c1a522
     rs:
@@ -43,7 +43,7 @@ MonoBehaviour:
     rs:
       key: Client - Port
       type: int
-      value: 25567
+      value: 7777
   - metadata:
       entityId: 8941b589-2984-42c8-b650-2e8587c1a522
     rs:

@@ -10,9 +10,12 @@ public class networkManagerAdd : NetworkManager
     public struct appAttributes {}
 
     public static string networkAddress;
+    public static int Port;
     public static int maxConnections;
     public static int numPlayers;
-    public static int Port;
+
+    public GameObject loadIcon;
+    public bool error = false;
 
     void Update() 
     {
@@ -21,12 +24,13 @@ public class networkManagerAdd : NetworkManager
         maxConnections = ConfigManager.appConfig.GetInt("Server - Max players");
     }
 
-    /*public override void OnServerAddPlayer(NetworkConnection conn)
+    public void Load()
     {
-        base.OnServerAddPlayer(conn);
-        CSteamID steamId = SteamMatchmaking.GetLobbyMemberByIndex(SteamLobby.LobbyId, numPlayers - 1);
+        loadIcon.SetActive(true);
 
-        var playerInfoDisplay = conn.identity.GetComponent<PlayerInfoDisplay>();
-        playerInfoDisplay.SetSteamId(steamId.m_SteamID);
-    }*/
+        if (error)
+        {
+            loadIcon.SetActive(false);
+        }
+    }
 }

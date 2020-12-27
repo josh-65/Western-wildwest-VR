@@ -3155,15 +3155,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3284697041163334396}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7434e43635fb2924583f5e0f2fb6ed3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snapAngle: 15
+  snapAngle: 20
   showTurnAnimation: 1
   snapTurnSource: {fileID: 3221562041057065192}
-  rotateSound: {fileID: 8300000, guid: 973c016de5a1cf34ebb6b3477ca2da5c, type: 3}
+  rotateSound: {fileID: 8300000, guid: 8dfc580618850428e904fc73c87a36db, type: 3}
   rotateRightFX: {fileID: 3284697043943621048}
   rotateLeftFX: {fileID: 3284697044139202712}
   snapLeftAction:
@@ -3695,7 +3695,7 @@ AudioSource:
   m_GameObject: {fileID: 3284697043733852792}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -8440094477626723417, guid: 0635511ed387e4c4f91a82eacbc50c36, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.2
@@ -3742,7 +3742,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
