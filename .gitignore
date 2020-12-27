@@ -1,3 +1,5 @@
 *.log
 Library/
 Temp/
+.vs/
+.vscode/
