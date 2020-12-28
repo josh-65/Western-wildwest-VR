@@ -40,7 +40,7 @@ public class pauseMenu : MonoBehaviour
 
         // Open/Close pause menu
         if (SteamVR_Actions._default.Pause[SteamVR_Input_Sources.LeftHand].stateDown) {
-            if (PauseMenu.active) {
+            if (PauseMenu.activeSelf) {
                 PauseMenu.SetActive(false);
             }else {
                 PauseMenu.SetActive(true);

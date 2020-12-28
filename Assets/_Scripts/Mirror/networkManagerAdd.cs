@@ -1,6 +1,5 @@
 using Mirror;
 using System;
-using Steamworks;
 using UnityEngine;
 using Unity.RemoteConfig;
 
@@ -12,16 +11,22 @@ public class networkManagerAdd : NetworkManager
     public static string networkAddress;
     public static int Port;
     public static int maxConnections;
+    
     public static int numPlayers;
-
     public GameObject loadIcon;
-    public bool error = false;
+    private bool error = false;
 
     void Update() 
     {
         ConfigManager.FetchConfigs<userAttributes, appAttributes>(new userAttributes(), new appAttributes());
         networkAddress = ConfigManager.appConfig.GetString("Client - IP");
+        Port = ConfigManager.appConfig.GetInt("Client - Port");
         maxConnections = ConfigManager.appConfig.GetInt("Server - Max players");
+    }
+
+    public override void OnClientDisconnect(NetworkConnection conn)
+    {
+        error = true;
     }
 
     public void Load()
@@ -31,6 +36,12 @@ public class networkManagerAdd : NetworkManager
         if (error)
         {
             loadIcon.SetActive(false);
+            error = false;
         }
+    }
+
+    public override void OnClientConnect(NetworkConnection conn)
+    {
+
     }
 }
