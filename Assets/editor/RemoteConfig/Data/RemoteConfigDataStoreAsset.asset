@@ -12,61 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  rsKeyList:
-  - metadata:
-      entityId: ded3b26e-8b04-4f1a-a752-7baa64ece200
-    rs:
-      key: Client - IP
-      type: string
-      value: localhost
-  - metadata:
-      entityId: bf009a83-ab79-450c-aa62-27b0c10d6cd5
-    rs:
-      key: Client - Port
-      type: int
-      value: 7777
-  - metadata:
-      entityId: 0e13a18b-fd6c-402b-90a4-eef7e34301ae
-    rs:
-      key: Server - Max players
-      type: int
-      value: 5
-  rsLastCachedKeyList:
-  - metadata:
-      entityId: ded3b26e-8b04-4f1a-a752-7baa64ece200
-    rs:
-      key: Client - IP
-      type: string
-      value: localhost
-  - metadata:
-      entityId: bf009a83-ab79-450c-aa62-27b0c10d6cd5
-    rs:
-      key: Client - Port
-      type: int
-      value: 7777
-  - metadata:
-      entityId: 0e13a18b-fd6c-402b-90a4-eef7e34301ae
-    rs:
-      key: Server - Max players
-      type: int
-      value: 5
-  configId: f034aa72-d8ba-4468-bade-62c4d986a09f
-  currentEnvironmentId: 9d007e7f-eb8b-458d-aa5d-297e895ae83c
-  environments:
-  - id: 124e474c-2ce3-41e0-a262-0a690d3da30a
-    appId: 
-    name: Release (Default)
-    description: 
-    createdAt: 2020-12-13T17:30:42Z
-    updatedAt: 2020-12-13T17:30:42Z
-  - id: 9d007e7f-eb8b-458d-aa5d-297e895ae83c
-    appId: 
-    name: Development
-    description: 
-    createdAt: 2020-12-13T17:30:42Z
-    updatedAt: 2020-12-13T17:30:42Z
-  rulesList: []
-  lastCachedRulesList: []
-  addedRulesIDs: []
-  updatedRulesIDs: []
-  deletedRulesIDs: []
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e65cfb23-d0cf-42ca-bd85-3113e8bb2ff6\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"Client - IP\",\r\n      \"type\": \"string\",\r\n     
+    \"value\": \"userve.ddns.net\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
+    \"entityId\": \"c231967d-0e2c-43f8-b360-2ab3a673e6e7\"\r\n    },\r\n    \"rs\":
+    {\r\n      \"key\": \"Client - Port\",\r\n      \"type\": \"int\",\r\n      \"value\":
+    25566\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4987be7a-9d98-4965-aafe-7712f592b3a9\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"Server - Max players\",\r\n      \"type\":
+    \"int\",\r\n      \"value\": 100\r\n    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e65cfb23-d0cf-42ca-bd85-3113e8bb2ff6\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"Client - IP\",\r\n      \"type\": \"string\",\r\n     
+    \"value\": \"userve.ddns.net\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
+    \"entityId\": \"c231967d-0e2c-43f8-b360-2ab3a673e6e7\"\r\n    },\r\n    \"rs\":
+    {\r\n      \"key\": \"Client - Port\",\r\n      \"type\": \"int\",\r\n      \"value\":
+    25566\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4987be7a-9d98-4965-aafe-7712f592b3a9\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"Server - Max players\",\r\n      \"type\":
+    \"int\",\r\n      \"value\": 100\r\n    }\r\n  }\r\n]"
+  _environments: "[\r\n  {\r\n    \"projectId\": \"20bdcf62-c719-4f5c-bd49-7a15e5f52ced\",\r\n   
+    \"name\": \"Release\",\r\n    \"id\": \"124e474c-2ce3-41e0-a262-0a690d3da30a\",\r\n   
+    \"createdAt\": \"2020-12-13T17:30:42Z\",\r\n    \"updatedAt\": \"2020-12-13T17:30:42Z\",\r\n   
+    \"isDefault\": true\r\n  },\r\n  {\r\n    \"projectId\": \"20bdcf62-c719-4f5c-bd49-7a15e5f52ced\",\r\n   
+    \"name\": \"Development\",\r\n    \"id\": \"9d007e7f-eb8b-458d-aa5d-297e895ae83c\",\r\n   
+    \"createdAt\": \"2020-12-13T17:30:42Z\",\r\n    \"updatedAt\": \"2020-12-13T17:30:42Z\",\r\n   
+    \"isDefault\": false\r\n  }\r\n]"
+  _rulesList: '[]'
+  _lastCachedRulesList: '[]'
