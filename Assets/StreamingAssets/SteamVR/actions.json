@@ -54,6 +54,10 @@
       "type": "pose"
     },
     {
+      "name": "/actions/default/in/pauseMenu",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     }
