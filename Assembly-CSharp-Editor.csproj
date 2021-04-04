@@ -40,6 +40,22 @@
      <Compile Include="Assets\editor\Terrain tools\TerrainToolkitEditor.cs" />
      <Compile Include="Assets\editor\Carter Games\Leaderboard Manager\LeaderboardDisplayEditor.cs" />
      <Compile Include="Assets\editor\Carter Games\Save Manager\SaveDataEditor.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SteamAudioWindow.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SteamAudioReverbGUI.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SteamAudioBakedStaticListenerNodeInspector.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SteamAudioProbeBoxInspector.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SteamAudioDynamicObjectInspector.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SimulationSettingsValueDrawer.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SteamAudioSourceInspector.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\Build.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SteamAudioGeometryInspector.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SteamAudioListenerInspector.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SteamAudioMaterialInspector.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SteamAudioMixerReturnGUI.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SteamAudioAmbisonicsSourceInspector.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SteamAudioCustomSettingsInspector.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\SteamAudioManagerInspector.cs" />
+     <Compile Include="Assets\SteamAudio\Editor\MaterialValueDrawer.cs" />
     <Reference Include="UnityEngine">
         <HintPath>G:/Unity Editors/2020.3.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -667,6 +683,9 @@
     <Reference Include="Unity.VSCode.Editor">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.XR.OpenVR">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.XR.OpenVR.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Searcher.Editor">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
     </Reference>
@@ -739,6 +758,9 @@
     <Reference Include="Unity.Subsystem.Registration">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Subsystem.Registration.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.XR.OpenVR.Editor">
+        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.XR.OpenVR.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Animation.Rigging">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.Animation.Rigging.dll</HintPath>
     </Reference>
@@ -769,12 +791,6 @@
     <Reference Include="Unity.SysrootPackage.Editor">
         <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.XR.OpenVR">
-        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.XR.OpenVR.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.XR.OpenVR.Editor">
-        <HintPath>D:/Joshs PC/Unity/Western wildwest VR/Library/ScriptAssemblies/Unity.XR.OpenVR.Editor.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
@@ -801,6 +817,10 @@
       <Project>{944ec47c-ad30-a0df-d03b-c145ce544d42}</Project>
       <Name>SteamVR_Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="SteamVR_Actions.csproj">
+      <Project>{1549060a-ed66-d43a-6902-cc32e1cd18e3}</Project>
+      <Name>SteamVR_Actions</Name>
+    </ProjectReference>
     <ProjectReference Include="Mirror.Editor.csproj">
       <Project>{7e97a45a-6d3e-c2d7-bef1-4c057a5d908d}</Project>
       <Name>Mirror.Editor</Name>
@@ -821,10 +841,6 @@
       <Project>{a0a58301-df82-8829-efea-c6b5418c277f}</Project>
       <Name>Telepathy</Name>
     </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.Cloud.GUI.csproj">
-      <Project>{0953144e-681d-a44b-c8d2-7f18e1741d80}</Project>
-      <Name>Mirror.Examples.Cloud.GUI</Name>
-    </ProjectReference>
     <ProjectReference Include="Mirror.Components.csproj">
       <Project>{55856dcc-d869-d557-e5ed-c771891f42f8}</Project>
       <Name>Mirror.Components</Name>
@@ -837,10 +853,6 @@
       <Project>{e96d4196-74ca-9b92-ca95-3ba4450d98fc}</Project>
       <Name>SteamVR</Name>
     </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.csproj">
-      <Project>{9e37926c-1ee8-fc69-c178-78574ad76b64}</Project>
-      <Name>Mirror.Examples</Name>
-    </ProjectReference>
     <ProjectReference Include="Mirror.Cloud.csproj">
       <Project>{a0e8eb4c-2cc5-24c8-52ea-ce4bb3d32991}</Project>
       <Name>Mirror.Cloud</Name>
@@ -848,14 +860,6 @@
     <ProjectReference Include="SimpleWebTransport.csproj">
       <Project>{5169284d-fbf5-d05c-4deb-62fe911208ed}</Project>
       <Name>SimpleWebTransport</Name>
-    </ProjectReference>
-    <ProjectReference Include="Mirror.Examples.Cloud.Pong.csproj">
-      <Project>{bf5bb6bb-4318-592a-c0db-f6f7fd1e7a86}</Project>
-      <Name>Mirror.Examples.Cloud.Pong</Name>
-    </ProjectReference>
-    <ProjectReference Include="SteamVR_Actions.csproj">
-      <Project>{1549060a-ed66-d43a-6902-cc32e1cd18e3}</Project>
-      <Name>SteamVR_Actions</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

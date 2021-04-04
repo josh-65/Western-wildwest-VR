@@ -53,6 +53,59 @@
      <Compile Include="Assets\_Scripts\Leaderboard Manager\LeaderboardManager.cs" />
      <Compile Include="Assets\_Scripts\timeCycle.cs" />
      <Compile Include="Assets\_Scripts\Save Manager\SaveData.cs" />
+     <Compile Include="Assets\SteamAudio\AudioEngineState_Unity.cs" />
+     <Compile Include="Assets\SteamAudio\Baker.cs" />
+     <Compile Include="Assets\SteamAudio\MaterialPresetList.cs" />
+     <Compile Include="Assets\SteamAudio\SceneExporter.cs" />
+     <Compile Include="Assets\SteamAudio\SteamAudioSource.cs" />
+     <Compile Include="Assets\SteamAudio\AudioEngineAmbisonicsSourceFactory.cs" />
+     <Compile Include="Assets\SteamAudio\ProbeManager.cs" />
+     <Compile Include="Assets\SteamAudio\AudioEngineSource_Unity.cs" />
+     <Compile Include="Assets\SteamAudio\AudioEngineState.cs" />
+     <Compile Include="Assets\SteamAudio\ManagerData.cs" />
+     <Compile Include="Assets\SteamAudio\Version.cs" />
+     <Compile Include="Assets\SteamAudio\AudioEngineAmbisonicsSource_Unity.cs" />
+     <Compile Include="Assets\SteamAudio\SteamAudioGeometry.cs" />
+     <Compile Include="Assets\SteamAudio\RayTracer.cs" />
+     <Compile Include="Assets\SteamAudio\GameEngineState.cs" />
+     <Compile Include="Assets\SteamAudio\AudioEngineAmbisonicsSource.cs" />
+     <Compile Include="Assets\SteamAudio\SteamAudioListener.cs" />
+     <Compile Include="Assets\SteamAudio\SteamAudioCustomSettings.cs" />
+     <Compile Include="Assets\SteamAudio\SteamAudioAmbisonicsSource.cs" />
+     <Compile Include="Assets\SteamAudio\Scene.cs" />
+     <Compile Include="Assets\SteamAudio\ComponentCache.cs" />
+     <Compile Include="Assets\SteamAudio\MaterialPreset.cs" />
+     <Compile Include="Assets\SteamAudio\AudioEngineStateFactory.cs" />
+     <Compile Include="Assets\SteamAudio\Core.cs" />
+     <Compile Include="Assets\SteamAudio\SteamAudioBakedStaticListenerNode.cs" />
+     <Compile Include="Assets\SteamAudio\Core_Unity.cs" />
+     <Compile Include="Assets\SteamAudio\Common.cs" />
+     <Compile Include="Assets\SteamAudio\SimulationSettingsPresetList.cs" />
+     <Compile Include="Assets\SteamAudio\AudioEngine.cs" />
+     <Compile Include="Assets\SteamAudio\Environment.cs" />
+     <Compile Include="Assets\SteamAudio\SteamAudioManager.cs" />
+     <Compile Include="Assets\SteamAudio\MaterialValue.cs" />
+     <Compile Include="Assets\SteamAudio\SteamAudioDynamicObject.cs" />
+     <Compile Include="Assets\SteamAudio\SteamAudioMaterial.cs" />
+     <Compile Include="Assets\SteamAudio\SimulationSettingsPreset.cs" />
+     <Compile Include="Assets\SteamAudio\ComputeDevice.cs" />
+     <Compile Include="Assets\SteamAudio\SteamAudioProbeBox.cs" />
+     <Compile Include="Assets\SteamAudio\AudioEngineSourceFactory.cs" />
+     <Compile Include="Assets\SteamAudio\SteamAudioCustomSpeakerLayout.cs" />
+     <Compile Include="Assets\SteamAudio\AudioEngineSource.cs" />
+     <Compile Include="Assets\SteamAudio\SimulationSettingsValue.cs" />
+     <Compile Include="Assets\Vivox\Samples\TanksUnityGameSample\Scripts\Managers\GameManager.cs" />
+     <Compile Include="Assets\Vivox\Samples\TanksUnityGameSample\Scripts\UI\UIDirectionControl.cs" />
+     <Compile Include="Assets\Vivox\Samples\TanksUnityGameSample\Scripts\Vivox\UI\RosterItem.cs" />
+     <Compile Include="Assets\Vivox\Samples\TanksUnityGameSample\Scripts\Vivox\UI\TextChatUI.cs" />
+     <Compile Include="Assets\Vivox\Samples\TanksUnityGameSample\Scripts\Vivox\UI\RosterManager.cs" />
+     <Compile Include="Assets\Vivox\Samples\TanksUnityGameSample\Scripts\Vivox\UI\LoginScreenUI.cs" />
+     <Compile Include="Assets\Vivox\Samples\TanksUnityGameSample\Scripts\Vivox\VivoxVoiceManager.cs" />
+     <Compile Include="Assets\Vivox\Samples\TanksUnityGameSample\Scripts\UI\HUDMultiplayerScore.cs" />
+     <Compile Include="Assets\Vivox\Samples\TanksUnityGameSample\Scripts\Vivox\UI\LobbyScreenUI.cs" />
+     <Compile Include="Assets\Vivox\Samples\TanksUnityGameSample\Scripts\Vivox\ButtonState.cs" />
+     <Compile Include="Assets\Vivox\Samples\TanksUnityGameSample\Scripts\UI\MainMenuOptions.cs" />
+     <Compile Include="Assets\Vivox\Samples\TanksUnityGameSample\Scripts\Vivox\PositionalVoice.cs" />
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\StreamingAssets\TestResults.xml" />
      <None Include="Assets\Mirror\Version.txt" />
@@ -837,6 +890,14 @@
     <ProjectReference Include="SimpleWebTransport.csproj">
       <Project>{5169284d-fbf5-d05c-4deb-62fe911208ed}</Project>
       <Name>SimpleWebTransport</Name>
+    </ProjectReference>
+    <ProjectReference Include="VivoxEditor.csproj">
+      <Project>{cef4b3b5-ed0f-1f9f-97ba-304288247340}</Project>
+      <Name>VivoxEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="VivoxUnity.csproj">
+      <Project>{31896173-99ac-01d1-474b-cd77371dd55c}</Project>
+      <Name>VivoxUnity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

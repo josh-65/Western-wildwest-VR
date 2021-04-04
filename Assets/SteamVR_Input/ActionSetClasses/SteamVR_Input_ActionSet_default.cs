@@ -81,14 +81,6 @@ namespace Valve.VR
             }
         }
         
-        public virtual SteamVR_Action_Boolean Pause
-        {
-            get
-            {
-                return SteamVR_Actions.default_Pause;
-            }
-        }
-        
         public virtual SteamVR_Action_Vector2 Walk
         {
             get
@@ -105,11 +97,11 @@ namespace Valve.VR
             }
         }
         
-        public virtual SteamVR_Action_Boolean pauseMenu
+        public virtual SteamVR_Action_Boolean Pause
         {
             get
             {
-                return SteamVR_Actions.default_pauseMenu;
+                return SteamVR_Actions.default_Pause;
             }
         }
         
