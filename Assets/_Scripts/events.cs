@@ -22,7 +22,7 @@ public class events : MonoBehaviour
             }
 
             if(date == "24-12" || date == "25-12") {
-                Debug.Log("christmas");
+                Debug.Log("Christmas");
 
             }
 

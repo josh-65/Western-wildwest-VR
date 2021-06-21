@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
   m_Name: RemoteConfigDataStoreAsset
   m_EditorClassIdentifier: 
-  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e65cfb23-d0cf-42ca-bd85-3113e8bb2ff6\"\r\n   
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"19e9f906-59c8-4445-bbe8-e64bac904889\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Client - IP\",\r\n      \"type\": \"string\",\r\n     
     \"value\": \"userve.ddns.net\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"c231967d-0e2c-43f8-b360-2ab3a673e6e7\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"95e28c90-e9b9-4494-aadd-caf037229171\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"Client - Port\",\r\n      \"type\": \"int\",\r\n      \"value\":
-    25566\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4987be7a-9d98-4965-aafe-7712f592b3a9\"\r\n   
+    25567\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a582e395-bf1c-46a5-873f-5a432d56756e\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Server - Max players\",\r\n      \"type\":
     \"int\",\r\n      \"value\": 100\r\n    }\r\n  }\r\n]"
-  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e65cfb23-d0cf-42ca-bd85-3113e8bb2ff6\"\r\n   
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"19e9f906-59c8-4445-bbe8-e64bac904889\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Client - IP\",\r\n      \"type\": \"string\",\r\n     
     \"value\": \"userve.ddns.net\"\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n     
-    \"entityId\": \"c231967d-0e2c-43f8-b360-2ab3a673e6e7\"\r\n    },\r\n    \"rs\":
+    \"entityId\": \"95e28c90-e9b9-4494-aadd-caf037229171\"\r\n    },\r\n    \"rs\":
     {\r\n      \"key\": \"Client - Port\",\r\n      \"type\": \"int\",\r\n      \"value\":
-    25566\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"4987be7a-9d98-4965-aafe-7712f592b3a9\"\r\n   
+    25567\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"a582e395-bf1c-46a5-873f-5a432d56756e\"\r\n   
     },\r\n    \"rs\": {\r\n      \"key\": \"Server - Max players\",\r\n      \"type\":
     \"int\",\r\n      \"value\": 100\r\n    }\r\n  }\r\n]"
   _environments: "[\r\n  {\r\n    \"projectId\": \"20bdcf62-c719-4f5c-bd49-7a15e5f52ced\",\r\n   

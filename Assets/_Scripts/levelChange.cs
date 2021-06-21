@@ -14,7 +14,7 @@ public class levelChange : MonoBehaviour
 
             IEnumerator reset() {
                 yield return new WaitForSeconds(creditLength);
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene("M - Main");
             }
         }
     }
@@ -25,6 +25,6 @@ public class levelChange : MonoBehaviour
     }
 
     public void loadCredits() {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("M - Credits");
     }
 }

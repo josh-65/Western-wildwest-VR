@@ -16,12 +16,22 @@ public class networkManagerAdd : NetworkManager
     public GameObject loadIcon;
     private bool error = false;
 
+    void Start() {
+        error = true;
+    }
+
     void Update() 
     {
         ConfigManager.FetchConfigs<userAttributes, appAttributes>(new userAttributes(), new appAttributes());
         networkAddress = ConfigManager.appConfig.GetString("Client - IP");
         Port = ConfigManager.appConfig.GetInt("Client - Port");
         maxConnections = ConfigManager.appConfig.GetInt("Server - Max players");
+
+        if (error) {
+            loadIcon.SetActive(false);
+        } else {
+            loadIcon.SetActive(true);
+        }
     }
 
     public override void OnClientDisconnect(NetworkConnection conn)
@@ -29,19 +39,12 @@ public class networkManagerAdd : NetworkManager
         error = true;
     }
 
-    public void Load()
-    {
-        loadIcon.SetActive(true);
-
-        if (error)
-        {
-            loadIcon.SetActive(false);
-            error = false;
-        }
+    public override void OnClientConnect(NetworkConnection conn) {
+        
     }
 
-    public override void OnClientConnect(NetworkConnection conn)
+    public void Load()
     {
-
+        error = false;
     }
 }

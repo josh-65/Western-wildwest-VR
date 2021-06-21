@@ -1,0 +1,144 @@
+{
+  "bindings": {
+    "/actions/buggy": {
+      "chords": [],
+      "poses": [],
+      "haptics": [],
+      "sources": [],
+      "skeleton": []
+    },
+    "/actions/default": {
+      "chords": [],
+      "poses": [],
+      "haptics": [
+        {
+          "output": "/actions/default/out/haptic",
+          "path": "/user/hand/left/output/haptic"
+        },
+        {
+          "output": "/actions/default/out/haptic",
+          "path": "/user/hand/right/output/haptic"
+        }
+      ],
+      "sources": [
+        {
+          "path": "/user/hand/left/input/trigger",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/default/in/interactui"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/trigger",
+          "mode": "button",
+          "parameters": {},
+          "inputs": {
+            "click": {
+              "output": "/actions/default/in/interactui"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/thumbstick",
+          "mode": "dpad",
+          "parameters": {
+            "deadzone_pct": "85",
+            "overlap_pct": "0",
+            "sub_mode": "touch"
+          },
+          "inputs": {
+            "east": {
+              "output": "/actions/default/in/snapturnright"
+            },
+            "west": {
+              "output": "/actions/default/in/snapturnleft"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/thumbstick",
+          "mode": "dpad",
+          "parameters": {
+            "deadzone_pct": "85",
+            "overlap_pct": "0",
+            "sub_mode": "touch"
+          },
+          "inputs": {
+            "east": {
+              "output": "/actions/default/in/snapturnright"
+            },
+            "west": {
+              "output": "/actions/default/in/snapturnleft"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/grip",
+          "mode": "grab",
+          "parameters": {
+            "force_hold_threshold": "0.02",
+            "force_release_threshold": "0.01"
+          },
+          "inputs": {
+            "grab": {
+              "output": "/actions/default/in/grabgrip"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/grip",
+          "mode": "grab",
+          "parameters": {
+            "force_hold_threshold": "0.02",
+            "force_release_threshold": "0.01"
+          },
+          "inputs": {
+            "grab": {
+              "output": "/actions/default/in/grabgrip"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/left/input/pinch",
+          "mode": "grab",
+          "parameters": {
+            "force_hold_threshold": "0.02",
+            "force_release_threshold": "0.01"
+          },
+          "inputs": {
+            "grab": {
+              "output": "/actions/default/in/grabpinch"
+            }
+          }
+        },
+        {
+          "path": "/user/hand/right/input/pinch",
+          "mode": "grab",
+          "parameters": {
+            "force_hold_threshold": "0.02",
+            "force_release_threshold": "0.01"
+          },
+          "inputs": {
+            "grab": {
+              "output": "/actions/default/in/grabpinch"
+            }
+          }
+        }
+      ],
+      "skeleton": []
+    },
+    "/actions/platformer": {
+      "chords": [],
+      "poses": [],
+      "haptics": [],
+      "sources": [],
+      "skeleton": []
+    }
+  },
+  "controller_type": "knuckles",
+  "description": "",
+  "name": "knuckles_default"
+}
