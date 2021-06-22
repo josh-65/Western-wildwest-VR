@@ -42,6 +42,6 @@ public class timeCycle : MonoBehaviour
         float moonRotation = sunRotation - 180.0f;
         sun.transform.rotation = Quaternion.Euler(sunRotation, -150.0f, 0);
         moon.transform.rotation = Quaternion.Euler(moonRotation, -150.0f, 0);
-        sky.spaceEmissionMultiplier.value = stars.Evaluate(alpha) * 5.0f;
+        sky.spaceEmissionMultiplier.value = stars.Evaluate(alpha) * 50.0f;
     }
 }

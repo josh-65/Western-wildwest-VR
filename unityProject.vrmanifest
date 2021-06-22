@@ -2,13 +2,13 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.westernwildwest.exe",
+      "app_key": "application.generated.unity.wildbutwesternvr.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "D:\\Joshs PC\\Unity\\Western wildwest VR\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "D:\\Joshs PC\\Unity\\Wild But Western VR\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "Western wildwest [Testing]"
+          "name": "Wild But Western VR [Testing]"
         }
       }
     }
