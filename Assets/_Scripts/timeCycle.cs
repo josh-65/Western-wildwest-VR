@@ -14,7 +14,7 @@ public class timeCycle : MonoBehaviour
 
     [Range(0,24)]
     public float time = 12f;
-    public float timeSpeed = 1.0f;
+    public float orbitSpeed = 1.0f;
 
     void Start() {
         skyVolume.profile.TryGet(out sky);
@@ -22,7 +22,7 @@ public class timeCycle : MonoBehaviour
 
     void Update()
     {
-        time += Time.deltaTime * (timeSpeed * 0.000411f);
+        time += Time.deltaTime * (orbitSpeed * 0.000411f);
         if (time > 24) {
             time = 0.0f;
         }
@@ -42,6 +42,6 @@ public class timeCycle : MonoBehaviour
         float moonRotation = sunRotation - 180.0f;
         sun.transform.rotation = Quaternion.Euler(sunRotation, -150.0f, 0);
         moon.transform.rotation = Quaternion.Euler(moonRotation, -150.0f, 0);
-        sky.spaceEmissionMultiplier.value = stars.Evaluate(alpha) * 50.0f;
+        sky.spaceEmissionMultiplier.value = stars.Evaluate(alpha) * 5.0f;
     }
 }
