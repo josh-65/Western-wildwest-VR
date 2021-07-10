@@ -19,6 +19,10 @@ namespace Valve.VR
         
         private static SteamVR_Input_ActionSet_default p__default;
         
+        private static SteamVR_Input_ActionSet_train p_train;
+        
+        private static SteamVR_Input_ActionSet_ridding p_ridding;
+        
         public static SteamVR_Input_ActionSet_default _default
         {
             get
@@ -27,11 +31,31 @@ namespace Valve.VR
             }
         }
         
+        public static SteamVR_Input_ActionSet_train train
+        {
+            get
+            {
+                return SteamVR_Actions.p_train.GetCopy<SteamVR_Input_ActionSet_train>();
+            }
+        }
+        
+        public static SteamVR_Input_ActionSet_ridding ridding
+        {
+            get
+            {
+                return SteamVR_Actions.p_ridding.GetCopy<SteamVR_Input_ActionSet_ridding>();
+            }
+        }
+        
         private static void StartPreInitActionSets()
         {
             SteamVR_Actions.p__default = ((SteamVR_Input_ActionSet_default)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_default>("/actions/default")));
+            SteamVR_Actions.p_train = ((SteamVR_Input_ActionSet_train)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_train>("/actions/train")));
+            SteamVR_Actions.p_ridding = ((SteamVR_Input_ActionSet_ridding)(SteamVR_ActionSet.Create<SteamVR_Input_ActionSet_ridding>("/actions/ridding")));
             Valve.VR.SteamVR_Input.actionSets = new Valve.VR.SteamVR_ActionSet[] {
-                    SteamVR_Actions._default};
+                    SteamVR_Actions._default,
+                    SteamVR_Actions.train,
+                    SteamVR_Actions.ridding};
         }
     }
 }

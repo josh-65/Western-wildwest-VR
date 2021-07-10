@@ -168,6 +168,32 @@
          "poses" : [],
          "skeleton" : [],
          "sources" : []
+      },
+      "/actions/ridding" : {
+         "haptics" : [
+            {
+               "output" : "/actions/ridding/out/haptic",
+               "path" : "/user/hand/right/output/haptic"
+            },
+            {
+               "output" : "/actions/ridding/out/haptic",
+               "path" : "/user/hand/left/output/haptic"
+            }
+         ],
+         "sources" : []
+      },
+      "/actions/train" : {
+         "haptics" : [
+            {
+               "output" : "/actions/train/out/haptic",
+               "path" : "/user/hand/right/output/haptic"
+            },
+            {
+               "output" : "/actions/train/out/haptic",
+               "path" : "/user/hand/left/output/haptic"
+            }
+         ],
+         "sources" : []
       }
    },
    "category" : "steamvr_input",

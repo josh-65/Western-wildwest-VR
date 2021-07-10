@@ -17,14 +17,14 @@ public class pauseMenu : MonoBehaviour
     private Canvas inv;
     public GameObject PauseMenu;
     
-    void Awake()
+    void DAwake()
     {
         target = Camera2Follow.transform;
         
         PauseMenu.SetActive(false);
     }
 
-    void Update()
+    void DUpdate()
     {
         // Define my target position in front of the camera ->
         Vector3 targetPosition = target.TransformPoint(new Vector3(0, 0, CameraDistance));

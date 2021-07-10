@@ -41,6 +41,20 @@ namespace Valve.VR
         
         private static SteamVR_Action_Vibration p_default_Haptic;
         
+        private static SteamVR_Action_Boolean p_train_interactUI;
+        
+        private static SteamVR_Action_Boolean p_train_GrabGrip;
+        
+        private static SteamVR_Action_Skeleton p_train_SkeletonLeftHand;
+        
+        private static SteamVR_Action_Skeleton p_train_SkeletonRightHand;
+        
+        private static SteamVR_Action_Pose p_train_pose;
+        
+        private static SteamVR_Action_Vibration p_train_Haptic;
+        
+        private static SteamVR_Action_Vibration p_ridding_Haptic;
+        
         public static SteamVR_Action_Boolean default_InteractUI
         {
             get
@@ -137,6 +151,62 @@ namespace Valve.VR
             }
         }
         
+        public static SteamVR_Action_Boolean train_interactUI
+        {
+            get
+            {
+                return SteamVR_Actions.p_train_interactUI.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Boolean train_GrabGrip
+        {
+            get
+            {
+                return SteamVR_Actions.p_train_GrabGrip.GetCopy<SteamVR_Action_Boolean>();
+            }
+        }
+        
+        public static SteamVR_Action_Skeleton train_SkeletonLeftHand
+        {
+            get
+            {
+                return SteamVR_Actions.p_train_SkeletonLeftHand.GetCopy<SteamVR_Action_Skeleton>();
+            }
+        }
+        
+        public static SteamVR_Action_Skeleton train_SkeletonRightHand
+        {
+            get
+            {
+                return SteamVR_Actions.p_train_SkeletonRightHand.GetCopy<SteamVR_Action_Skeleton>();
+            }
+        }
+        
+        public static SteamVR_Action_Pose train_pose
+        {
+            get
+            {
+                return SteamVR_Actions.p_train_pose.GetCopy<SteamVR_Action_Pose>();
+            }
+        }
+        
+        public static SteamVR_Action_Vibration train_Haptic
+        {
+            get
+            {
+                return SteamVR_Actions.p_train_Haptic.GetCopy<SteamVR_Action_Vibration>();
+            }
+        }
+        
+        public static SteamVR_Action_Vibration ridding_Haptic
+        {
+            get
+            {
+                return SteamVR_Actions.p_ridding_Haptic.GetCopy<SteamVR_Action_Vibration>();
+            }
+        }
+        
         private static void InitializeActionArrays()
         {
             Valve.VR.SteamVR_Input.actions = new Valve.VR.SteamVR_Action[] {
@@ -151,7 +221,14 @@ namespace Valve.VR
                     SteamVR_Actions.default_Walk,
                     SteamVR_Actions.default_Pose,
                     SteamVR_Actions.default_Pause,
-                    SteamVR_Actions.default_Haptic};
+                    SteamVR_Actions.default_Haptic,
+                    SteamVR_Actions.train_interactUI,
+                    SteamVR_Actions.train_GrabGrip,
+                    SteamVR_Actions.train_SkeletonLeftHand,
+                    SteamVR_Actions.train_SkeletonRightHand,
+                    SteamVR_Actions.train_pose,
+                    SteamVR_Actions.train_Haptic,
+                    SteamVR_Actions.ridding_Haptic};
             Valve.VR.SteamVR_Input.actionsIn = new Valve.VR.ISteamVR_Action_In[] {
                     SteamVR_Actions.default_InteractUI,
                     SteamVR_Actions.default_GrabPinch,
@@ -163,13 +240,23 @@ namespace Valve.VR
                     SteamVR_Actions.default_SnapTurnRight,
                     SteamVR_Actions.default_Walk,
                     SteamVR_Actions.default_Pose,
-                    SteamVR_Actions.default_Pause};
+                    SteamVR_Actions.default_Pause,
+                    SteamVR_Actions.train_interactUI,
+                    SteamVR_Actions.train_GrabGrip,
+                    SteamVR_Actions.train_SkeletonLeftHand,
+                    SteamVR_Actions.train_SkeletonRightHand,
+                    SteamVR_Actions.train_pose};
             Valve.VR.SteamVR_Input.actionsOut = new Valve.VR.ISteamVR_Action_Out[] {
-                    SteamVR_Actions.default_Haptic};
+                    SteamVR_Actions.default_Haptic,
+                    SteamVR_Actions.train_Haptic,
+                    SteamVR_Actions.ridding_Haptic};
             Valve.VR.SteamVR_Input.actionsVibration = new Valve.VR.SteamVR_Action_Vibration[] {
-                    SteamVR_Actions.default_Haptic};
+                    SteamVR_Actions.default_Haptic,
+                    SteamVR_Actions.train_Haptic,
+                    SteamVR_Actions.ridding_Haptic};
             Valve.VR.SteamVR_Input.actionsPose = new Valve.VR.SteamVR_Action_Pose[] {
-                    SteamVR_Actions.default_Pose};
+                    SteamVR_Actions.default_Pose,
+                    SteamVR_Actions.train_pose};
             Valve.VR.SteamVR_Input.actionsBoolean = new Valve.VR.SteamVR_Action_Boolean[] {
                     SteamVR_Actions.default_InteractUI,
                     SteamVR_Actions.default_GrabPinch,
@@ -177,14 +264,18 @@ namespace Valve.VR
                     SteamVR_Actions.default_HeadsetOnHead,
                     SteamVR_Actions.default_SnapTurnLeft,
                     SteamVR_Actions.default_SnapTurnRight,
-                    SteamVR_Actions.default_Pause};
+                    SteamVR_Actions.default_Pause,
+                    SteamVR_Actions.train_interactUI,
+                    SteamVR_Actions.train_GrabGrip};
             Valve.VR.SteamVR_Input.actionsSingle = new Valve.VR.SteamVR_Action_Single[0];
             Valve.VR.SteamVR_Input.actionsVector2 = new Valve.VR.SteamVR_Action_Vector2[] {
                     SteamVR_Actions.default_Walk};
             Valve.VR.SteamVR_Input.actionsVector3 = new Valve.VR.SteamVR_Action_Vector3[0];
             Valve.VR.SteamVR_Input.actionsSkeleton = new Valve.VR.SteamVR_Action_Skeleton[] {
                     SteamVR_Actions.default_SkeletonLeftHand,
-                    SteamVR_Actions.default_SkeletonRightHand};
+                    SteamVR_Actions.default_SkeletonRightHand,
+                    SteamVR_Actions.train_SkeletonLeftHand,
+                    SteamVR_Actions.train_SkeletonRightHand};
             Valve.VR.SteamVR_Input.actionsNonPoseNonSkeletonIn = new Valve.VR.ISteamVR_Action_In[] {
                     SteamVR_Actions.default_InteractUI,
                     SteamVR_Actions.default_GrabPinch,
@@ -193,7 +284,9 @@ namespace Valve.VR
                     SteamVR_Actions.default_SnapTurnLeft,
                     SteamVR_Actions.default_SnapTurnRight,
                     SteamVR_Actions.default_Walk,
-                    SteamVR_Actions.default_Pause};
+                    SteamVR_Actions.default_Pause,
+                    SteamVR_Actions.train_interactUI,
+                    SteamVR_Actions.train_GrabGrip};
         }
         
         private static void PreInitActions()
@@ -210,6 +303,13 @@ namespace Valve.VR
             SteamVR_Actions.p_default_Pose = ((SteamVR_Action_Pose)(SteamVR_Action.Create<SteamVR_Action_Pose>("/actions/default/in/Pose")));
             SteamVR_Actions.p_default_Pause = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/default/in/Pause")));
             SteamVR_Actions.p_default_Haptic = ((SteamVR_Action_Vibration)(SteamVR_Action.Create<SteamVR_Action_Vibration>("/actions/default/out/Haptic")));
+            SteamVR_Actions.p_train_interactUI = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/train/in/interactUI")));
+            SteamVR_Actions.p_train_GrabGrip = ((SteamVR_Action_Boolean)(SteamVR_Action.Create<SteamVR_Action_Boolean>("/actions/train/in/GrabGrip")));
+            SteamVR_Actions.p_train_SkeletonLeftHand = ((SteamVR_Action_Skeleton)(SteamVR_Action.Create<SteamVR_Action_Skeleton>("/actions/train/in/SkeletonLeftHand")));
+            SteamVR_Actions.p_train_SkeletonRightHand = ((SteamVR_Action_Skeleton)(SteamVR_Action.Create<SteamVR_Action_Skeleton>("/actions/train/in/SkeletonRightHand")));
+            SteamVR_Actions.p_train_pose = ((SteamVR_Action_Pose)(SteamVR_Action.Create<SteamVR_Action_Pose>("/actions/train/in/pose")));
+            SteamVR_Actions.p_train_Haptic = ((SteamVR_Action_Vibration)(SteamVR_Action.Create<SteamVR_Action_Vibration>("/actions/train/out/Haptic")));
+            SteamVR_Actions.p_ridding_Haptic = ((SteamVR_Action_Vibration)(SteamVR_Action.Create<SteamVR_Action_Vibration>("/actions/ridding/out/Haptic")));
         }
     }
 }
